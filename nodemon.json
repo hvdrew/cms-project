@@ -1,0 +1,18 @@
+{
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "*.ts",
+      "node_modules/**/node_modules",
+      "client/scss/"
+    ],
+    "verbose": true,
+    "watch": [
+      "client/",
+      "dist/"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js,pug,css,html"
+}

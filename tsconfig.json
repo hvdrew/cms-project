@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "dist",
+        "sourceMap": true,
+        "removeComments": true,
+        /* Remove the comments for the two lines below when I feel like hating my life */
+        // "strict": true,                        /* Enable all strict type-checking options. */
+        // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+    },
+    "files": [
+        "./node_modules/@types/node/index.d.ts"
+    ],
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules/*.ts",
+        "node_modules",
+        ".git"
+    ]
+}

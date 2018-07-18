@@ -1,4 +1,22 @@
-extends ./layout.pug
-
-block content
-    h1 Hello!
+html(lang="en")
+	head
+		title Merison.io | #{title || 'Node CMS'}
+		block head-tags
+			include ./partials/head-tags.pug
+			link(rel="stylesheet", href="public/css/cover.css")
+			
+	body.text-center
+		.cover-container.d-flex.h-100.p-3.mx-auto.flex-column
+			header.masthead.mb-auto
+				.inner
+					h3.masthead-brand Merison.io
+					nav.nav.nav-masthead.justify-content-center.navbar-transparent
+						a.nav-link(href="/register", style="color: #66615b") Register
+			main.inner.cover
+				h1.cover-heading.p-3 Node CMS
+				p.lead.p-3 Node CMS aims to provide a fast, flexible, and versatile CMS Framework.
+				p.lead.p-3
+					a.btn.btn-lg.btn-outline-default(href="/login") Log In
+			footer.mastfoot.mt-auto
+				.inner
+					p.mb-2 Made with #[i.fas.fa-heart] by Merison.io

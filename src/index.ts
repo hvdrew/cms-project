@@ -13,16 +13,16 @@ app.use('/public', express.static('public'));
 app.set('view engine', 'pug');
 app.use('/', mainRouter);
 
-// Setup for Mongodb Connection
-mongoose.connect(
-	config.DB,
-	{ useNewUrlParser: true }
-);
-const db = mongoose.connection;
-db.on('error', (err) => {
-	console.log(`${err.name}: ${err.message}`);
-});
-db.on('open', () => console.log('Connected to Mongodb successfully!'));
+// Setup for Mongodb Connection (Commented out while working on static assets)
+// mongoose.connect(
+// 	config.DB,
+// 	{ useNewUrlParser: true }
+// );
+// const db = mongoose.connection;
+// db.on('error', (err) => {
+// 	console.log(`${err.name}: ${err.message}`);
+// });
+// db.on('open', () => console.log('Connected to Mongodb successfully!'));
 
 // Spin up the server
 app.listen(3000, () => console.log('Listening on port 3000.'));

@@ -1,0 +1,12 @@
+html
+	head
+		title Merison.io | #{title || 'Node CMS'}
+		block head-tags
+			include ./partials/head-tags.pug
+			
+	body
+		block header
+			include ./partials/header.pug
+		block content
+		block foot
+			include ./partials/footer.pug

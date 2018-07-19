@@ -1,6 +1,24 @@
+// import * as express from 'express';
+
+// export class mainRouter {
+// 	router: express.Router;
+
+// 	constructor() {
+// 		this.router = express.Router();
+// 	}
+
+// 	routes() {
+// 		this.router.get('/', (req: express.Request, res: express.Response) => {
+// 			return res.status(200).render('index');
+// 		});
+// 	}
+// }
+
+// The commented code above is a WIP, for now the code below works:
+
 import { Router } from 'express';
 
-const router = Router();
+const router: Router = Router();
 
 // Index Route
 router.get('/', (req, res) => {

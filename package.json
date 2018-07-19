@@ -5,14 +5,12 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon dist",
-    "watch": "tsc --watch",
-    "build-css": "purifycss public/css/precompiled/bootstrap.min.css public/css/precompiled/cover.css public/css/precompiled/demo.css public/css/precompiled/nucleo-icons.css public/css/precompiled/paper-kit.css public/css/precompiled/all.css --min --info --out public/css/main.css"
+    "watch": "tsc --watch"
   },
   "author": "Andrew Merison",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^1.17.5",
-    "purify-css": "^1.2.5"
+    "nodemon": "^1.17.5"
   },
   "dependencies": {
     "@types/body-parser": "^1.17.0",

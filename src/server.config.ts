@@ -1,3 +1,8 @@
+export interface Configuration {
+	PORT: number;
+	DB: string;
+}
+
 let configurations: any = {};
 
 configurations.development = {
@@ -10,7 +15,7 @@ configurations.production = {
 	DB: ''
 };
 
-export const config =
+export const config: Configuration =
 	typeof configurations[process.env.NODE_ENV] !== undefined
 		? configurations[process.env.NODE_ENV]
 		: configurations.development;

@@ -1,28 +1,17 @@
-import * as express from 'express';
-import * as mongoose from 'mongoose';
-import * as morgan from 'morgan';
-import * as bodyParser from 'body-parser';
+import { Server } from './server';
 import { config } from './server.config';
 import { mainRouter } from './controllers/main.controller';
+import { Database } from './lib/db/main.db';
 
-const app = express();
-app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use('/public', express.static('public'));
-app.set('view engine', 'pug');
-app.use('/', mainRouter);
+// Setting up our configs and class instances
+const PORT: number = config.PORT || 3000;
+const dbUrl: string = config.DB || 'mongodb://localhost:27017/crm-test';
+const App = new Server(config);
+const DB = new Database();
 
-// Setup for Mongodb Connection (Commented out while working on static assets)
-// mongoose.connect(
-// 	config.DB,
-// 	{ useNewUrlParser: true }
-// );
-// const db = mongoose.connection;
-// db.on('error', (err) => {
-// 	console.log(`${err.name}: ${err.message}`);
-// });
-// db.on('open', () => console.log('Connected to Mongodb successfully!'));
+// Connect to DB
+DB.connect(dbUrl);
 
-// Spin up the server
-app.listen(3000, () => console.log('Listening on port 3000.'));
+// Load routes and fire up the server
+App.routeLoader(mainRouter);
+App.listen(PORT, () => console.log(`Listening on port ${PORT}`));

@@ -3,20 +3,20 @@ html(lang="en")
 		title Merison.io | #{title || 'Node CMS'}
 		block head-tags
 			include ./partials/head-tags.pug
-			link(rel="stylesheet", href="public/css/cover.css")
 			
 	body.text-center
-		.cover-container.d-flex.h-100.p-3.mx-auto.flex-column
-			header.masthead.mb-auto
+		.container.d-flex.h-100.p-3.mx-auto.flex-column
+			header.mb-auto.mt-3
 				.inner
-					h3.masthead-brand Merison.io
-					nav.nav.nav-masthead.justify-content-center.navbar-transparent
-						a.nav-link(href="/register", style="color: #66615b") Register
+					h3.float-md-left.m-0 Merison.io
+					nav.nav.justify-content-center.navbar-transparent.d-none.d-md-block
+						a.nav-link.float-md-right(href="/register", style="color: #66615b") Register
 			main.inner.cover
 				h1.cover-heading.p-3 Node CMS
 				p.lead.p-3 Node CMS aims to provide a fast, flexible, and versatile CMS Framework.
 				p.lead.p-3
-					a.btn.btn-lg.btn-outline-default(href="/login") Log In
-			footer.mastfoot.mt-auto
+					a.btn.btn-lg.btn-outline-default.mr-md-0.mr-2(href="/login") Log In
+					a.btn.btn-lg.btn-default.d-inline-block.d-md-none.ml-2(href="/register") Register
+			footer.mt-auto.mb-3
 				.inner
 					p.mb-2 Made with #[i.fas.fa-heart] by Merison.io

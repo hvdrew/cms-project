@@ -16,6 +16,6 @@ configurations.production = {
 };
 
 export const config: Configuration =
-	typeof configurations[process.env.NODE_ENV] !== undefined
+	typeof (configurations[process.env.NODE_ENV] !== undefined)
 		? configurations[process.env.NODE_ENV]
 		: configurations.development;

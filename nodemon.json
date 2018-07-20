@@ -9,7 +9,9 @@
     "verbose": true,
     "watch": [
       "client/",
-      "dist/"
+      "dist/",
+      "public/",
+      "views/"
     ],
     "env": {
       "NODE_ENV": "development"

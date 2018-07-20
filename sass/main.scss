@@ -1,0 +1,12 @@
+// Custom changes
+$container-max-widths: (
+  sm: 80%,
+  md: 82.5%,
+  lg: 85%,
+  xl: 90%
+) !default;
+
+$font-family-base: "Montserrat", "Helvetica", Arial, sans-serif;
+
+// Import main
+@import "partials/source";
